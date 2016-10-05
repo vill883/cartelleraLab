@@ -10,6 +10,5 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	//prova
-	private int hola;
+	
 }
