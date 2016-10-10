@@ -20,12 +20,12 @@ public class CinemaRepository {
         this.jdbcOperations = jdbcOperations;
     }
 
-  /*  public Iterable<Cinema> findAll() {
+   /* public Iterable<Cinema> findAll() {
         return jdbcOperations.query("Select * from note_lab", new CinemaRepository.CinemaMapper());
-    }*/
+    }
 
 
-   /* private final class CinemaMapper implements RowMapper<Cinema> {
+
         @Override
         public Cinema mapRow(ResultSet resultSet, int i) throws SQLException {
             return new CinemaBuilder().setTitle(resultSet.getString("title"))
