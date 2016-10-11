@@ -13,7 +13,7 @@ import java.util.List;
 public class UsuariRepository {
     private JdbcOperations jdbcOperations;
 
-    public UsuariRepository(JdbcOperations jdbcOperations, NoteLabRepository noteLabRepository) {
+   /* public UsuariRepository(JdbcOperations jdbcOperations, NoteLabRepository noteLabRepository) {
         this.jdbcOperations = jdbcOperations;
         this.noteLabRepository = noteLabRepository;
     }
@@ -43,5 +43,5 @@ public class UsuariRepository {
             userLab.addNotes(notes);
             return userLab;
         }
-    }
+    }*/
 }
