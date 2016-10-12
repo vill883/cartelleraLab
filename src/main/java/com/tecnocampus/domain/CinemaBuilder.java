@@ -10,23 +10,24 @@ public class CinemaBuilder {
     private String direccio;
     private String telefon;
 
-    public CinemaBuilder() {
-    }
-
-    public void setId(String id) {
+    public CinemaBuilder setId(String id) {
         this.id = id;
+        return this;
     }
 
-    public void setNom(String nom) {
+    public CinemaBuilder setNom(String nom) {
         this.nom = nom;
+        return this;
     }
 
-    public void setDireccio(String direccio) {
+    public CinemaBuilder setDireccio(String direccio) {
         this.direccio = direccio;
+        return this;
     }
 
-    public void setTelefon(String telefon) {
+    public CinemaBuilder setTelefon(String telefon) {
         this.telefon = telefon;
+        return this;
     }
 
     public Cinema CreateCinema() {

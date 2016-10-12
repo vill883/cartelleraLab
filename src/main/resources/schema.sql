@@ -1,5 +1,5 @@
-DROP TABLE if EXISTS cinema;
-CREATE TABLE cinema
+DROP TABLE if EXISTS cinema_lab;
+CREATE TABLE cinema_lab
 (
   id VARCHAR (55) PRIMARY KEY,
   nom VARCHAR (55),
@@ -7,8 +7,8 @@ CREATE TABLE cinema
   telefon VARCHAR (100)
 );
 
-DROP TABLE if EXISTS note_lab;
-CREATE TABLE note_lab (
+DROP TABLE if EXISTS user_lab;
+CREATE TABLE user_lab (
   id bigint auto_increment PRIMARY KEY,
   title VARCHAR (255),
   content VARCHAR (255),
