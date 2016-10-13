@@ -6,15 +6,15 @@ package com.tecnocampus.domain;
 public class Usuari {
 
     private String DNI;
-    private String titol;
+    private String nom;
     private String cognom;
-    private int telefon;
+    private String telefon;
     private String idUsuari;
     private String password;
 
-    public Usuari(String DNI, String titol, String cognom, int telefon, String idUsuari, String password) {
+    public Usuari(String DNI, String titol, String cognom, String telefon, String idUsuari, String password) {
         this.DNI = DNI;
-        this.titol = titol;
+        this.nom = titol;
         this.cognom = cognom;
         this.telefon = telefon;
         this.idUsuari = idUsuari;
@@ -25,7 +25,7 @@ public class Usuari {
     public String toString() {
         return "Usuari{" +
                 "DNI='" + DNI + '\'' +
-                ", titol='" + titol + '\'' +
+                ", nom='" + nom + '\'' +
                 ", cognom='" + cognom + '\'' +
                 ", telefon=" + telefon +
                 ", idUsuari='" + idUsuari + '\'' +
@@ -41,12 +41,12 @@ public class Usuari {
         this.DNI = DNI;
     }
 
-    public String getTitol() {
-        return titol;
+    public String getNom() {
+        return nom;
     }
 
     public void setTitol(String titol) {
-        this.titol = titol;
+        this.nom = titol;
     }
 
     public String getCognom() {
@@ -57,11 +57,11 @@ public class Usuari {
         this.cognom = cognom;
     }
 
-    public int getTelefon() {
+    public String getTelefon() {
         return telefon;
     }
 
-    public void setTelefon(int telefon) {
+    public void setTelefon(String telefon) {
         this.telefon = telefon;
     }
 

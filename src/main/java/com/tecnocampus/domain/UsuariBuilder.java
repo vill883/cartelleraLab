@@ -8,7 +8,7 @@ public class UsuariBuilder {
     private String DNI;
     private String nom;
     private String cognom;
-    private int telefon;
+    private String  telefon;
     private String idUsuari;
     private String password;
 
@@ -33,7 +33,7 @@ public class UsuariBuilder {
     }
 
 
-    public UsuariBuilder setTelefon(int telefon) {
+    public UsuariBuilder setTelefon(String telefon) {
         this.telefon = telefon;
         return this;
     }

@@ -30,7 +30,7 @@ public class CinemaBuilder {
         return this;
     }
 
-    public Cinema CreateCinema() {
+    public Cinema createCinema() {
         return new Cinema(id,nom,direccio,telefon);
     }
 }

@@ -1,10 +1,13 @@
-DROP TABLE if EXISTS cinema_lab;
+DROP TABLE if EXISTS usuari_cartellera;
 CREATE TABLE cinema_lab
 (
-  id VARCHAR (55) PRIMARY KEY,
+  DNI VARCHAR (55) PRIMARY KEY,
   nom VARCHAR (55),
-  direccio VARCHAR (55),
-  telefon VARCHAR (100)
+  cognom VARCHAR (55),
+  telefon VARCHAR (55),
+  idUsuari VARCHAR (55),
+  password VARCHAR  (55)
+
 );
 
 DROP TABLE if EXISTS user_lab;
