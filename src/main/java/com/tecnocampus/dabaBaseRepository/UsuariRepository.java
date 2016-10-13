@@ -25,16 +25,16 @@ public class UsuariRepository {
     }
 
     public Iterable<Usuari> findAll() {
-        return jdbcOperations.query("Select * from user_lab", new UsuariMapper());
+        return jdbcOperations.query("Select * from usuari_cartellera", new UsuariMapper());
     }
 
-    public UserLab findOne(String userName) {
+   /* public UserLab findOne(String userName) {
         return jdbcOperations.queryForObject("Select * from user_lab where username = ?", new Object[]{userName}, new UserLabMapper());
-    }
+    }*/
 
-    public int save(UserLab userLab) {
-        int userUpdate = jdbcOperations.update("insert into user_lab values(?, ?, ?, ?)", userLab.getUsername(), userLab.getName(), userLab.getSecondName(), userLab.getEmail());
-        noteLabRepository.saveUserNotes(userLab);
+    public int save(Usuari usuari) {
+        int userUpdate = jdbcOperations.update("insert into usuari_cartellera values(?, ?, ?, ?, ?, ? )", usuari.getDNI(),usuari.getNom(),usuari.getCognom(), usuari.getTelefon(),
+                usuari.getIdUsuari(), usuari.getPassword());
 
         return userUpdate;
     }
@@ -42,12 +42,11 @@ public class UsuariRepository {
     private final class UsuariMapper implements RowMapper<Usuari> {
         @Override
         public Usuari mapRow(ResultSet resultSet, int i) throws SQLException {
-            Usuari usuari = new UsuariBuilder().setNom(resultSet.getString("username")).seNom(resultSet.getString("name"))
-                    .setSecondname(resultSet.getString("second_name")).setEmail(resultSet.getString("email"))
-                    .createUserLab();
-            List<NoteLab> notes = noteLabRepository.findAllFromUser(userLab.getUsername());
-            userLab.addNotes(notes);
-            return userLab;
+            Usuari usuari = new UsuariBuilder().setDNI("DNI").setNom(resultSet.getString("nom")).setCognom(resultSet.getString("cognom"))
+                    .setTelefon(resultSet.getString("telefon")).setIdUsuari(resultSet.getString("idUsuari")).setPassword(resultSet.getString("password"))
+                    .createUsuari();
+
+            return usuari;
         }
     }
 }

@@ -1,6 +1,9 @@
 package com.tecnocampus;
 
+import com.tecnocampus.dabaBaseRepository.CinemaRepository;
 import com.tecnocampus.dabaBaseRepository.UsuariRepository;
+import com.tecnocampus.domain.Usuari;
+import com.tecnocampus.useCases.UserUseCases;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +21,7 @@ public class DemoApplication {
 	private UsuariRepository usuariRepository;
 
 	@Autowired
-	private NoteLabRepository noteLabRepository;
+	private CinemaRepository cinemaRepository;
 
 	@Autowired
 	private UserUseCases userUseCases;
@@ -28,13 +31,13 @@ public class DemoApplication {
 		return new CommandLineRunner() {
 			@Override
 			public void run(String... strings) throws Exception {
-				Iterable<UserLab> users = userLabRepository.findAll();
-				users.forEach(u -> System.out.println(u.getUsername() + u.getName()));
+				Iterable<Usuari> users = usuariRepository.findAll();
+			//	users.forEach(u -> System.out.println(u.getUsername() + u.getName()));
 
-				Iterable<NoteLab> notes = noteLabRepository.findAll();
-				notes.forEach(n -> System.out.println( n.getTitle()));
+			//	Iterable<NoteLab> notes = noteLabRepository.findAll();
+			//	notes.forEach(n -> System.out.println( n.getTitle()));
 
-				userUseCases.createUser("jr", "pepe", "roure", "mail");
+			//	userUseCases.createUser("jr", "pepe", "roure", "mail");
 			}
 		};
 	}
